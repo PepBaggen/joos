@@ -255,6 +255,11 @@ padding-bottom: 20px;
     font-size: 1.6vw;
 }
 
+
+#contact.section {
+    padding-top: 150vh;
+}
+
         }
 
 
