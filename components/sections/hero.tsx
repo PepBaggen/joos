@@ -16,100 +16,167 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
+const newsItems = [
+  {
+    date: "Aug 2024",
+    text: "UNCOVER Survey catalog published in ApJS",
+    link: "#",
+  },
+  {
+    date: "Jun 2024",
+    text: "RUBIES paper on evolved stellar populations accepted",
+    link: "#",
+  },
+  {
+    date: "Mar 2023",
+    text: "Research on massive quiescent galaxies published in ApJL",
+    link: "#",
+  },
+];
+
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20 relative z-10">
-      <div className="max-w-3xl mx-auto text-center">
+    <section className="min-h-screen pt-24 pb-16 px-4 md:px-8 lg:px-16 relative z-10">
+      <div className="max-w-5xl mx-auto">
+        {/* Name and Title */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
         >
-          {/* Large headline like reference */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-white">
-            EXPLORE
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-balance">
+            <span className="text-primary">Josephine</span> F. W. Baggen
           </h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-4"
-          >
-            The Universe with
-          </motion.p>
-
-          {/* Name */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-medium text-primary mb-8"
-          >
-            Josephine F. W. Baggen
-          </motion.h2>
-
-          {/* Role */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-lg text-muted-foreground mb-12"
-          >
+          <p className="text-lg text-muted-foreground">
             PhD Candidate in Astronomy at Yale University
-          </motion.p>
-
-          {/* CTA Button - Orange like reference */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col items-center gap-6"
-          >
-            <a
-              href="https://www.linkedin.com/in/josephine-baggen-713994131/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
-            >
-              <LinkedInIcon className="w-5 h-5" />
-              <span>Connect</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* About section - moved below, cleaner */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="mt-20 glass rounded-2xl p-8 text-left max-w-2xl mx-auto"
-        >
-          <h3 className="text-lg font-semibold mb-4 text-primary">About My Research</h3>
-          <p className="text-muted-foreground leading-relaxed">
-            I explore the frontiers of extragalactic astronomy and galaxy formation, 
-            focusing on understanding how galaxies evolve across cosmic time. My work 
-            utilizes cutting-edge observational data from facilities like the James Webb 
-            Space Telescope to uncover the mysteries of the early universe.
           </p>
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Main content - two columns on larger screens */}
+        <div className="grid lg:grid-cols-[1fr,320px] gap-8 lg:gap-12">
+          {/* Left column - Bio */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="space-y-6"
+          >
+            <div className="prose prose-invert max-w-none">
+              <p className="text-foreground leading-relaxed">
+                Welcome! I am a PhD candidate in the{" "}
+                <span className="font-semibold">Department of Astronomy</span> at{" "}
+                <span className="font-semibold">Yale University</span>. My research 
+                focuses on understanding galaxy formation and evolution across cosmic 
+                time, with particular emphasis on massive galaxies in the early universe.
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed">
+                I utilize data from cutting-edge facilities including the{" "}
+                <span className="italic">James Webb Space Telescope</span> (JWST) and 
+                the Hubble Space Telescope to study the stellar populations, structures, 
+                and formation histories of galaxies. I am a member of several major 
+                collaborations including{" "}
+                <a 
+                  href="#" 
+                  className="text-primary hover:underline"
+                >
+                  UNCOVER
+                </a>{" "}
+                and{" "}
+                <a 
+                  href="#" 
+                  className="text-primary hover:underline"
+                >
+                  RUBIES
+                </a>.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed">
+                My recent work has explored the properties of quiescent galaxies at 
+                high redshift, investigating how progenitor bias contributes to the 
+                observed size evolution of the massive galaxy population.
+              </p>
+            </div>
+
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              This page serves as a hub for my research, publications, and academic 
+              activities. Feel free to explore the links below to learn more.
+            </p>
+
+            {/* Connect button */}
+            <motion.a
+              href="https://www.linkedin.com/in/josephine-baggen-713994131/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              whileHover={{ x: 3 }}
+            >
+              <LinkedInIcon className="w-4 h-4" />
+              <span>Connect on LinkedIn</span>
+              <ExternalLink className="w-3 h-3" />
+            </motion.a>
+          </motion.div>
+
+          {/* Right column - Photo and Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
+          >
+            {/* Photo placeholder */}
+            <div className="aspect-[4/5] bg-muted/50 rounded-lg overflow-hidden border border-border">
+              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                <div className="text-center p-4">
+                  <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-muted flex items-center justify-center">
+                    <svg className="w-10 h-10 text-muted-foreground/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <p className="text-sm">Photo</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact info */}
+            <div className="font-mono text-sm text-muted-foreground space-y-1">
+              <p>Yale University</p>
+              <p>Department of Astronomy</p>
+              <p>New Haven, CT</p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* News Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.3 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16"
         >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 mx-auto border-2 border-muted-foreground/30 rounded-full flex items-start justify-center p-2"
-          >
-            <motion.div className="w-1.5 h-1.5 bg-primary rounded-full" />
-          </motion.div>
+          <h2 className="text-2xl font-normal mb-6 lowercase">news</h2>
+          <div className="space-y-3">
+            {newsItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="flex items-start gap-6"
+              >
+                <span className="text-sm text-muted-foreground font-medium whitespace-nowrap min-w-[90px]">
+                  {item.date}
+                </span>
+                <a
+                  href={item.link}
+                  className="text-primary hover:underline text-sm leading-relaxed"
+                >
+                  {item.text}
+                </a>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
