@@ -12,7 +12,6 @@ const navItems = [
   { id: "home", label: "About" },
   { id: "publications", label: "Publications" },
   { id: "cv", label: "CV" },
-  { id: "stellar-journal", label: "Resources" },
 ];
 
 export function Navigation({ activeSection, onNavigate }: NavigationProps) {

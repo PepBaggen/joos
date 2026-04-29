@@ -6,16 +6,14 @@ import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/sections/hero";
 import { PublicationsSection } from "@/components/sections/publications";
 import { CVSection } from "@/components/sections/cv";
-import { StellarJournalSection } from "@/components/sections/stellar-journal";
 import { Footer } from "@/components/footer";
 
-type Section = "home" | "publications" | "cv" | "stellar-journal";
+type Section = "home" | "publications" | "cv";
 
 const sectionComponents: Record<Section, React.ComponentType> = {
   home: HeroSection,
   publications: PublicationsSection,
   cv: CVSection,
-  "stellar-journal": StellarJournalSection,
 };
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
@@ -68,7 +66,7 @@ export default function HomePage() {
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      const sections: Section[] = ["home", "publications", "cv", "stellar-journal"];
+      const sections: Section[] = ["home", "publications", "cv"];
       const currentIndex = sections.indexOf(activeSection);
 
       if (e.key === "ArrowRight" || e.key === "ArrowDown") {
