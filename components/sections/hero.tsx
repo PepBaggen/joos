@@ -70,18 +70,28 @@ export function HeroSection() {
               activities. Feel free to explore the links below to learn more.
             </p>
 
-            {/* Connect button */}
-            <motion.a
-              href="https://www.linkedin.com/in/josephine-baggen-713994131/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-              whileHover={{ x: 3 }}
-            >
-              <LinkedInIcon className="w-4 h-4" />
-              <span>Connect on LinkedIn</span>
-              <ExternalLink className="w-3 h-3" />
-            </motion.a>
+            <div className="flex flex-col gap-3">
+              {/* Email */}
+              <a
+                href="mailto:josephine.baggen@yale.edu"
+                className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-sm"
+              >
+                josephine.baggen@yale.edu
+              </a>
+
+              {/* Connect button */}
+              <motion.a
+                href="https://www.linkedin.com/in/josephine-baggen-713994131/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                whileHover={{ x: 3 }}
+              >
+                <LinkedInIcon className="w-4 h-4" />
+                <span>Connect on LinkedIn</span>
+                <ExternalLink className="w-3 h-3" />
+              </motion.a>
+            </div>
           </motion.div>
 
         </div>
