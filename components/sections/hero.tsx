@@ -53,7 +53,7 @@ export function HeroSection() {
               PhD Candidate in Astronomy at Yale University
             </p>
           </div>
-          <div className="w-32 h-32 rounded-full overflow-hidden border border-border shrink-0 mt-1">
+          <div className="w-48 h-48 rounded-full overflow-hidden border border-border shrink-0 mt-1">
             <img
               src="/images/profile.jpeg"
               alt="Josephine F. W. Baggen"
