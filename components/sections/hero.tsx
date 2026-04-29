@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, ExternalLink } from "lucide-react";
+import { LinkedinIcon, ExternalLink } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -43,7 +43,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="glass glass-hover p-3 rounded-xl flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
             >
-              <Linkedin className="w-5 h-5" />
+              <LinkedinIcon className="w-5 h-5" />
               <span className="text-sm font-medium">LinkedIn</span>
               <ExternalLink className="w-3 h-3" />
             </a>
