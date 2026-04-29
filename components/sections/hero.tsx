@@ -38,23 +38,32 @@ export function HeroSection() {
   return (
     <section className="min-h-screen pt-24 pb-16 px-4 md:px-8 lg:px-16 relative z-10">
       <div className="max-w-5xl mx-auto">
-        {/* Name and Title */}
+        {/* Name and Title with small photo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-8 flex items-start justify-between gap-6"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-balance">
-            <span className="text-primary">Josephine</span> F. W. Baggen
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            PhD Candidate in Astronomy at Yale University
-          </p>
+          <div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-balance">
+              <span className="text-primary">Josephine</span> F. W. Baggen
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              PhD Candidate in Astronomy at Yale University
+            </p>
+          </div>
+          <div className="w-16 h-16 rounded-full overflow-hidden border border-border shrink-0 mt-1">
+            <img
+              src="/images/profile.jpeg"
+              alt="Josephine F. W. Baggen"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </motion.div>
 
-        {/* Main content - two columns on larger screens */}
-        <div className="grid lg:grid-cols-[1fr,96px] gap-8 lg:gap-10">
+        {/* Main content */}
+        <div className="grid gap-8">
           {/* Left column - Bio */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -118,29 +127,6 @@ export function HeroSection() {
             </motion.a>
           </motion.div>
 
-          {/* Right column - Photo and Contact */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
-            {/* Profile Photo */}
-            <div className="w-full aspect-square rounded-full overflow-hidden border border-border">
-              <img
-                src="/images/profile.jpeg"
-                alt="Josephine F. W. Baggen"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Contact info */}
-            <div className="font-mono text-sm text-muted-foreground space-y-1">
-              <p>Yale University</p>
-              <p>Department of Astronomy</p>
-              <p>New Haven, CT</p>
-            </div>
-          </motion.div>
         </div>
 
         {/* News Section */}
