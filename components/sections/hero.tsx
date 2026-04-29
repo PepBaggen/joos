@@ -54,7 +54,7 @@ export function HeroSection() {
         </motion.div>
 
         {/* Main content - two columns on larger screens */}
-        <div className="grid lg:grid-cols-[1fr,320px] gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-[1fr,160px] gap-8 lg:gap-10">
           {/* Left column - Bio */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export function HeroSection() {
             className="space-y-6"
           >
             {/* Profile Photo */}
-            <div className="aspect-[4/5] bg-muted/50 rounded-lg overflow-hidden border border-border">
+            <div className="w-full aspect-square rounded-full overflow-hidden border border-border">
               <img
                 src="/images/profile.jpeg"
                 alt="Josephine F. W. Baggen"
