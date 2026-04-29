@@ -141,19 +141,19 @@ function SmallPlanet({ className, color = "#9ca3af" }: { className?: string; col
 export function FloatingPlanets() {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {/* Saturn with orbiting spaceship - main focal point, positioned to not interfere with text */}
-      <Saturn className="absolute w-48 h-32 md:w-64 md:h-40 top-[15%] right-[5%] md:right-[10%]" />
-      
-      {/* Jupiter - bottom right */}
-      <Jupiter className="absolute w-20 h-20 md:w-28 md:h-28 bottom-[20%] right-[15%]" />
-      
-      {/* Moon - left side */}
-      <Moon className="absolute w-12 h-12 md:w-16 md:h-16 top-[60%] left-[8%]" />
-      
-      {/* Small planets scattered */}
-      <SmallPlanet className="absolute w-6 h-6 top-[30%] left-[15%]" color="#6b7280" />
-      <SmallPlanet className="absolute w-4 h-4 bottom-[35%] right-[30%]" color="#9ca3af" />
-      <SmallPlanet className="absolute w-5 h-5 top-[70%] right-[5%]" color="#8b949e" />
+      {/* Saturn - top right edge on mobile, spread in on desktop */}
+      <Saturn className="absolute w-32 h-20 md:w-64 md:h-40 top-[10%] right-[1%] md:right-[10%]" />
+
+      {/* Jupiter - bottom right edge */}
+      <Jupiter className="absolute w-16 h-16 md:w-28 md:h-28 bottom-[20%] right-[2%] md:right-[15%]" />
+
+      {/* Moon - left edge */}
+      <Moon className="absolute w-10 h-10 md:w-16 md:h-16 top-[60%] left-[1%] md:left-[8%]" />
+
+      {/* Small planets - hugging edges on mobile */}
+      <SmallPlanet className="absolute w-6 h-6 top-[30%] left-[2%] md:left-[15%]" color="#6b7280" />
+      <SmallPlanet className="absolute w-4 h-4 bottom-[35%] right-[2%] md:right-[30%]" color="#9ca3af" />
+      <SmallPlanet className="absolute w-5 h-5 top-[70%] right-[2%] md:right-[5%]" color="#8b949e" />
     </div>
   );
 }
