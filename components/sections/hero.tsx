@@ -58,10 +58,10 @@ export function HeroSection() {
               <p className="text-foreground leading-relaxed">
                 Hi! I am a PhD student in the{" "}
                 <span className="font-semibold">Department of Astronomy</span> at{" "}
-                <span className="font-semibold">Yale University</span>. My research
-                focuses on understanding galaxy formation and evolution across cosmic
-                time, with particular interests on massive galaxies and black holes
-                in the early universe.
+                <span className="font-semibold">Yale University</span>, working with
+                Prof. Pieter van Dokkum. My research focuses on understanding galaxy
+                formation and evolution across cosmic time, with particular interests
+                on massive galaxies and black holes in the early universe.
               </p>
             </div>
 
