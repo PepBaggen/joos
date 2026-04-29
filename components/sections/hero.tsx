@@ -72,12 +72,7 @@ export function HeroSection() {
 
             <div className="flex flex-col gap-3">
               {/* Email */}
-              <a
-                href="mailto:josephine.baggen@yale.edu"
-                className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-sm"
-              >
-                josephine.baggen@yale.edu
-              </a>
+              <span className="text-sm text-muted-foreground">josephine.baggen@yale.edu</span>
 
               {/* Connect button */}
               <motion.a
