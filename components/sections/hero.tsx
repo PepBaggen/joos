@@ -29,8 +29,8 @@ export function HeroSection() {
           className="mb-8 flex items-start justify-between gap-6"
         >
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-balance">
-              <span className="text-primary">Josephine</span> F. W. Baggen
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-balance">
+              Josephine F. W. Baggen
             </h1>
             <p className="text-lg text-muted-foreground">
               PhD Candidate in Astronomy at Yale University
