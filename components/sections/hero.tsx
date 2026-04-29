@@ -56,38 +56,12 @@ export function HeroSection() {
           >
             <div className="prose prose-invert max-w-none">
               <p className="text-foreground leading-relaxed">
-                Welcome! I am a PhD candidate in the{" "}
+                Hi! I am a PhD student in the{" "}
                 <span className="font-semibold">Department of Astronomy</span> at{" "}
-                <span className="font-semibold">Yale University</span>. My research 
-                focuses on understanding galaxy formation and evolution across cosmic 
-                time, with particular emphasis on massive galaxies in the early universe.
-              </p>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                I utilize data from cutting-edge facilities including the{" "}
-                <span className="italic">James Webb Space Telescope</span> (JWST) and 
-                the Hubble Space Telescope to study the stellar populations, structures, 
-                and formation histories of galaxies. I am a member of several major 
-                collaborations including{" "}
-                <a 
-                  href="#" 
-                  className="text-primary hover:underline"
-                >
-                  UNCOVER
-                </a>{" "}
-                and{" "}
-                <a 
-                  href="#" 
-                  className="text-primary hover:underline"
-                >
-                  RUBIES
-                </a>.
-              </p>
-
-              <p className="text-muted-foreground leading-relaxed">
-                My recent work has explored the properties of quiescent galaxies at 
-                high redshift, investigating how progenitor bias contributes to the 
-                observed size evolution of the massive galaxy population.
+                <span className="font-semibold">Yale University</span>. My research
+                focuses on understanding galaxy formation and evolution across cosmic
+                time, with particular interests on massive galaxies and black holes
+                in the early universe.
               </p>
             </div>
 
