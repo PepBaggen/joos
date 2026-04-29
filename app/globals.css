@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  /* Deep space color palette */
-  --color-background: #0d1117;
-  --color-foreground: #e6edf3;
+  --color-background: #1a1a1a;
+  --color-foreground: #e8e8e8;
 
-  --color-card: rgba(22, 27, 34, 0.8);
-  --color-card-foreground: #e6edf3;
+  --color-card: rgba(30, 30, 30, 0.8);
+  --color-card-foreground: #e8e8e8;
 
-  --color-primary: #a855f7;
+  --color-primary: #9b2335;
   --color-primary-foreground: #ffffff;
 
-  --color-secondary: #161b22;
-  --color-secondary-foreground: #8b949e;
+  --color-secondary: #242424;
+  --color-secondary-foreground: #888888;
 
-  --color-muted: #21262d;
-  --color-muted-foreground: #8b949e;
+  --color-muted: #2a2a2a;
+  --color-muted-foreground: #888888;
 
-  --color-accent: #a855f7;
+  --color-accent: #9b2335;
   --color-accent-foreground: #ffffff;
 
-  --color-border: rgba(48, 54, 61, 0.6);
+  --color-border: rgba(60, 60, 60, 0.6);
   
   /* Planet colors */
   --color-saturn: #d4a574;
@@ -70,7 +69,7 @@
 
 .glass-hover:hover {
   background: rgba(33, 38, 45, 0.8);
-  border-color: rgba(168, 85, 247, 0.3);
+  border-color: rgba(155, 35, 53, 0.3);
 }
 
 /* Orbit animation */
