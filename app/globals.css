@@ -1,32 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  /* Deep space color palette */
-  --color-background: #05050a;
-  --color-foreground: #e8e8f0;
+  /* Deep space color palette - matching reference */
+  --color-background: #0d1117;
+  --color-foreground: #e6edf3;
   
-  --color-card: rgba(15, 15, 30, 0.6);
-  --color-card-foreground: #e8e8f0;
+  --color-card: rgba(22, 27, 34, 0.8);
+  --color-card-foreground: #e6edf3;
   
-  --color-primary: #6366f1;
+  --color-primary: #f97316;
   --color-primary-foreground: #ffffff;
   
-  --color-secondary: #1e1e3f;
-  --color-secondary-foreground: #a5a5c0;
+  --color-secondary: #161b22;
+  --color-secondary-foreground: #8b949e;
   
-  --color-muted: #12121f;
-  --color-muted-foreground: #8888a0;
+  --color-muted: #21262d;
+  --color-muted-foreground: #8b949e;
   
-  --color-accent: #818cf8;
+  --color-accent: #f97316;
   --color-accent-foreground: #ffffff;
   
-  --color-border: rgba(99, 102, 241, 0.2);
+  --color-border: rgba(48, 54, 61, 0.6);
   
-  /* Starfield colors */
-  --color-star: #ffffff;
-  --color-star-dim: rgba(255, 255, 255, 0.3);
-  --color-nebula-purple: rgba(139, 92, 246, 0.1);
-  --color-nebula-blue: rgba(59, 130, 246, 0.08);
+  /* Planet colors */
+  --color-mars: #c1440e;
+  --color-saturn: #d4a574;
+  --color-jupiter: #c9a87c;
+  --color-moon: #9ca3af;
   
   /* Typography */
   --font-sans: "Space Grotesk", system-ui, sans-serif;
@@ -59,10 +59,10 @@
 
 /* Glass morphism utility */
 .glass {
-  background: rgba(15, 15, 30, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  background: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(48, 54, 61, 0.5);
 }
 
 .glass-hover {
@@ -70,56 +70,54 @@
 }
 
 .glass-hover:hover {
-  background: rgba(20, 20, 40, 0.7);
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
+  background: rgba(33, 38, 45, 0.8);
+  border-color: rgba(249, 115, 22, 0.3);
 }
 
-/* Glow effects */
-.glow-text {
-  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+/* Orbit animation */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(60px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(60px) rotate(-360deg);
+  }
 }
 
-.glow-border {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2),
-              inset 0 0 20px rgba(99, 102, 241, 0.05);
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
-/* Star animation keyframes */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
 @keyframes twinkle {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 1; }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { 
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-  }
-  50% { 
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
-  }
-}
-
-.animate-twinkle {
-  animation: twinkle 3s ease-in-out infinite;
+.animate-orbit {
+  animation: orbit 8s linear infinite;
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -128,7 +126,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

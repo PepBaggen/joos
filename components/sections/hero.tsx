@@ -18,67 +18,81 @@ function LinkedInIcon({ className }: { className?: string }) {
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-screen flex items-center justify-center px-4 pt-20 relative z-10">
+      <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Name */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4">
-            <span className="bg-gradient-to-r from-foreground via-accent to-primary bg-clip-text text-transparent">
-              Josephine F. W. Baggen
-            </span>
+          {/* Large headline like reference */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-white">
+            EXPLORE
           </h1>
 
-          {/* Title */}
+          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground mb-8"
+            className="text-xl md:text-2xl text-muted-foreground mb-4"
           >
-            PhD Candidate in Astronomy at{" "}
-            <span className="text-accent">Yale University</span>
+            The Universe with
           </motion.p>
 
-          {/* Social Links */}
+          {/* Name */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-2xl md:text-3xl lg:text-4xl font-medium text-primary mb-8"
+          >
+            Josephine F. W. Baggen
+          </motion.h2>
+
+          {/* Role */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-lg text-muted-foreground mb-12"
+          >
+            PhD Candidate in Astronomy at Yale University
+          </motion.p>
+
+          {/* CTA Button - Orange like reference */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex items-center justify-center gap-4 mb-12"
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col items-center gap-6"
           >
             <a
               href="https://www.linkedin.com/in/josephine-baggen-713994131/"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass glass-hover p-3 rounded-xl flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105"
             >
               <LinkedInIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">LinkedIn</span>
-              <ExternalLink className="w-3 h-3" />
+              <span>Connect</span>
+              <ExternalLink className="w-4 h-4" />
             </a>
           </motion.div>
         </motion.div>
 
-        {/* Bio Card */}
+        {/* About section - moved below, cleaner */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="glass rounded-2xl p-6 md:p-8 text-left max-w-2xl mx-auto glow-border"
+          transition={{ duration: 0.8, delay: 1 }}
+          className="mt-20 glass rounded-2xl p-8 text-left max-w-2xl mx-auto"
         >
-          <h2 className="text-xl font-semibold mb-4 text-accent">About</h2>
-          <p className="text-muted-foreground leading-relaxed font-serif text-lg">
-            I am a PhD candidate in Astronomy at Yale University, exploring the
-            frontiers of extragalactic astronomy and galaxy formation. My
-            research focuses on understanding how galaxies evolve across cosmic
-            time, utilizing cutting-edge observational data from facilities like
-            the James Webb Space Telescope. I am passionate about uncovering the
-            mysteries of the early universe and the processes that shape the
-            cosmic structures we observe today.
+          <h3 className="text-lg font-semibold mb-4 text-primary">About My Research</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            I explore the frontiers of extragalactic astronomy and galaxy formation, 
+            focusing on understanding how galaxies evolve across cosmic time. My work 
+            utilizes cutting-edge observational data from facilities like the James Webb 
+            Space Telescope to uncover the mysteries of the early universe.
           </p>
         </motion.div>
 
@@ -86,7 +100,7 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.8, delay: 1.3 }}
           className="mt-16"
         >
           <motion.div
@@ -94,9 +108,8 @@ export function HeroSection() {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="w-6 h-10 mx-auto border-2 border-muted-foreground/30 rounded-full flex items-start justify-center p-2"
           >
-            <motion.div className="w-1.5 h-1.5 bg-accent rounded-full" />
+            <motion.div className="w-1.5 h-1.5 bg-primary rounded-full" />
           </motion.div>
-          <p className="text-xs text-muted-foreground mt-2">Scroll to explore</p>
         </motion.div>
       </div>
     </section>
