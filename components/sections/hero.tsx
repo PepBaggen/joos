@@ -65,10 +65,6 @@ export function HeroSection() {
               </p>
             </div>
 
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              This page serves as a hub for my research, publications, and academic 
-              activities. Feel free to explore the links below to learn more.
-            </p>
 
             <div className="flex flex-col gap-3">
               {/* Email */}

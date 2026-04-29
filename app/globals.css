@@ -8,7 +8,7 @@
   --color-card: rgba(22, 27, 34, 0.8);
   --color-card-foreground: #e6edf3;
 
-  --color-primary: #f97316;
+  --color-primary: #a855f7;
   --color-primary-foreground: #ffffff;
 
   --color-secondary: #161b22;
@@ -17,7 +17,7 @@
   --color-muted: #21262d;
   --color-muted-foreground: #8b949e;
 
-  --color-accent: #f97316;
+  --color-accent: #a855f7;
   --color-accent-foreground: #ffffff;
 
   --color-border: rgba(48, 54, 61, 0.6);
@@ -70,7 +70,7 @@
 
 .glass-hover:hover {
   background: rgba(33, 38, 45, 0.8);
-  border-color: rgba(249, 115, 22, 0.3);
+  border-color: rgba(168, 85, 247, 0.3);
 }
 
 /* Orbit animation */
