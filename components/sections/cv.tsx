@@ -1,132 +1,232 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
+import { FileText, Download, Star } from "lucide-react";
 
 export function CVSection() {
   return (
-    <section className="min-h-screen pt-24 pb-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-5xl mx-auto">
+    <section className="min-h-screen py-24 px-4 flex items-center">
+      <div className="max-w-4xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl font-normal mb-8 lowercase">curriculum vitae</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-3">
+            <FileText className="w-8 h-8 text-accent" />
+            <span>Curriculum Vitae</span>
+          </h2>
         </motion.div>
 
-        {/* Download Button */}
+        {/* Coming Soon Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-12"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="glass rounded-2xl p-8 md:p-12 mt-8 relative overflow-hidden"
         >
-          <button
-            disabled
-            className="inline-flex items-center gap-2 border border-border px-4 py-2 rounded text-sm text-muted-foreground cursor-not-allowed opacity-60"
-          >
-            <Download className="w-4 h-4" />
-            <span>Download CV (PDF) - Coming Soon</span>
-          </button>
+          {/* Constellation graphic */}
+          <div className="absolute right-4 top-4 md:right-12 md:top-8 opacity-20">
+            <svg
+              width="200"
+              height="200"
+              viewBox="0 0 200 200"
+              className="text-accent"
+            >
+              {/* Stars */}
+              <circle cx="30" cy="40" r="3" fill="currentColor" />
+              <circle cx="80" cy="20" r="2" fill="currentColor" />
+              <circle cx="140" cy="50" r="4" fill="currentColor" />
+              <circle cx="170" cy="30" r="2" fill="currentColor" />
+              <circle cx="60" cy="90" r="3" fill="currentColor" />
+              <circle cx="120" cy="100" r="2" fill="currentColor" />
+              <circle cx="180" cy="80" r="3" fill="currentColor" />
+              <circle cx="40" cy="140" r="2" fill="currentColor" />
+              <circle cx="100" cy="160" r="4" fill="currentColor" />
+              <circle cx="160" cy="150" r="2" fill="currentColor" />
+              <circle cx="70" cy="180" r="3" fill="currentColor" />
+              <circle cx="130" cy="190" r="2" fill="currentColor" />
+
+              {/* Constellation lines */}
+              <line
+                x1="30"
+                y1="40"
+                x2="80"
+                y2="20"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="80"
+                y1="20"
+                x2="140"
+                y2="50"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="140"
+                y1="50"
+                x2="170"
+                y2="30"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="30"
+                y1="40"
+                x2="60"
+                y2="90"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="60"
+                y1="90"
+                x2="120"
+                y2="100"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="120"
+                y1="100"
+                x2="180"
+                y2="80"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="140"
+                y1="50"
+                x2="120"
+                y2="100"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="60"
+                y1="90"
+                x2="40"
+                y2="140"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="40"
+                y1="140"
+                x2="100"
+                y2="160"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="100"
+                y1="160"
+                x2="160"
+                y2="150"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="120"
+                y1="100"
+                x2="100"
+                y2="160"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="40"
+                y1="140"
+                x2="70"
+                y2="180"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+              <line
+                x1="100"
+                y1="160"
+                x2="130"
+                y2="190"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                opacity="0.5"
+              />
+            </svg>
+          </div>
+
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 text-accent mb-6">
+              <Star className="w-5 h-5 animate-pulse" />
+              <span className="text-sm font-medium uppercase tracking-wider">
+                Coming Soon
+              </span>
+            </div>
+
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Full CV Under Construction
+            </h3>
+
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg font-serif">
+              A detailed curriculum vitae including education, research
+              experience, teaching, awards, and presentations is currently being
+              prepared. Check back soon for the complete document.
+            </p>
+
+            {/* Download Button (Disabled) */}
+            <button
+              disabled
+              className="inline-flex items-center gap-2 bg-muted/50 text-muted-foreground px-5 py-3 rounded-xl cursor-not-allowed opacity-60"
+            >
+              <Download className="w-4 h-4" />
+              <span className="font-medium">Download CV (PDF)</span>
+            </button>
+
+            <p className="text-xs text-muted-foreground mt-3">
+              PDF download will be available soon
+            </p>
+          </div>
         </motion.div>
 
-        {/* CV Content */}
-        <div className="space-y-12">
-          {/* Education */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3 className="text-lg font-medium text-primary mb-6">Education</h3>
-            <div className="space-y-6">
-              <div className="flex flex-col md:flex-row md:gap-8">
-                <span className="text-sm text-muted-foreground md:min-w-[120px]">2020 - Present</span>
-                <div>
-                  <p className="font-medium">Ph.D. in Astronomy</p>
-                  <p className="text-muted-foreground text-sm">Yale University, New Haven, CT</p>
-                  <p className="text-muted-foreground text-sm mt-1">
-                    Advisor: Prof. Pieter van Dokkum
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row md:gap-8">
-                <span className="text-sm text-muted-foreground md:min-w-[120px]">2016 - 2020</span>
-                <div>
-                  <p className="font-medium">Bachelor of Science</p>
-                  <p className="text-muted-foreground text-sm">Physics and Astronomy</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+        {/* Quick Overview Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="grid md:grid-cols-2 gap-4 mt-8"
+        >
+          <div className="glass rounded-xl p-6">
+            <h4 className="font-semibold text-accent mb-2">Education</h4>
+            <p className="text-sm text-muted-foreground">
+              PhD Candidate in Astronomy
+            </p>
+            <p className="text-sm text-foreground">Yale University</p>
+          </div>
 
-          {/* Research Experience */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <h3 className="text-lg font-medium text-primary mb-6">Research Experience</h3>
-            <div className="space-y-6">
-              <div className="flex flex-col md:flex-row md:gap-8">
-                <span className="text-sm text-muted-foreground md:min-w-[120px]">2020 - Present</span>
-                <div>
-                  <p className="font-medium">Graduate Research Assistant</p>
-                  <p className="text-muted-foreground text-sm">Yale University</p>
-                  <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-                    Studying the formation and evolution of massive galaxies using JWST 
-                    and HST observations. Member of UNCOVER and RUBIES collaborations.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Collaborations */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h3 className="text-lg font-medium text-primary mb-6">Collaborations</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="text-primary">-</span>
-                <span>UNCOVER (Ultradeep NIRSpec and NIRCam ObserVations before the Epoch of Reionization)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary">-</span>
-                <span>RUBIES (Red Unknowns: Bright Infrared Extragalactic Survey)</span>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Skills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <h3 className="text-lg font-medium text-primary mb-6">Technical Skills</h3>
-            <div className="flex flex-wrap gap-2">
-              {["Python", "JWST Data Analysis", "Photometry", "Spectroscopy", "SED Fitting", "HST", "Scientific Writing"].map((skill) => (
-                <span
-                  key={skill}
-                  className="text-xs border border-border px-3 py-1.5 rounded-full text-muted-foreground"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+          <div className="glass rounded-xl p-6">
+            <h4 className="font-semibold text-accent mb-2">Research Focus</h4>
+            <p className="text-sm text-muted-foreground">
+              Extragalactic Astronomy & Galaxy Formation
+            </p>
+            <p className="text-sm text-foreground">JWST Observations</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,28 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Deep space color palette - formal academic cyan accent */
-  --color-background: #1a1a2e;
+  /* Deep space color palette - matching reference */
+  --color-background: #0d1117;
   --color-foreground: #e6edf3;
   
-  --color-card: rgba(26, 26, 46, 0.8);
+  --color-card: rgba(22, 27, 34, 0.8);
   --color-card-foreground: #e6edf3;
   
-  --color-primary: #22d3ee;
-  --color-primary-foreground: #0a0a0f;
+  --color-primary: #f97316;
+  --color-primary-foreground: #ffffff;
   
-  --color-secondary: #16162a;
+  --color-secondary: #161b22;
   --color-secondary-foreground: #8b949e;
   
-  --color-muted: #21213a;
+  --color-muted: #21262d;
   --color-muted-foreground: #8b949e;
   
-  --color-accent: #22d3ee;
-  --color-accent-foreground: #0a0a0f;
+  --color-accent: #f97316;
+  --color-accent-foreground: #ffffff;
   
-  --color-border: rgba(48, 54, 80, 0.6);
+  --color-border: rgba(48, 54, 61, 0.6);
   
   /* Planet colors */
+  --color-mars: #c1440e;
   --color-saturn: #d4a574;
   --color-jupiter: #c9a87c;
   --color-moon: #9ca3af;
@@ -58,10 +59,10 @@
 
 /* Glass morphism utility */
 .glass {
-  background: rgba(26, 26, 46, 0.7);
+  background: rgba(22, 27, 34, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(48, 54, 80, 0.5);
+  border: 1px solid rgba(48, 54, 61, 0.5);
 }
 
 .glass-hover {
@@ -69,17 +70,17 @@
 }
 
 .glass-hover:hover {
-  background: rgba(33, 33, 58, 0.8);
-  border-color: rgba(34, 211, 238, 0.3);
+  background: rgba(33, 38, 45, 0.8);
+  border-color: rgba(249, 115, 22, 0.3);
 }
 
 /* Orbit animation */
 @keyframes orbit {
   from {
-    transform: rotate(0deg) translateX(80px) rotate(0deg);
+    transform: rotate(0deg) translateX(60px) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(80px) rotate(-360deg);
+    transform: rotate(360deg) translateX(60px) rotate(-360deg);
   }
 }
 
@@ -99,7 +100,7 @@
 }
 
 .animate-orbit {
-  animation: orbit 12s linear infinite;
+  animation: orbit 8s linear infinite;
 }
 
 .animate-float {

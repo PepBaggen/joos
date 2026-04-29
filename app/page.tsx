@@ -20,8 +20,7 @@ const sectionComponents: Record<Section, React.ComponentType> = {
   "stellar-journal": StellarJournalSection,
 };
 
-const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
-
+// Smooth transition variants
 const pageVariants = {
   initial: {
     opacity: 0,
@@ -32,7 +31,7 @@ const pageVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: EASE,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
   exit: {
@@ -40,7 +39,7 @@ const pageVariants = {
     y: -20,
     transition: {
       duration: 0.3,
-      ease: EASE,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 };
