@@ -2,8 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Starfield } from "@/components/starfield";
-import { FloatingPlanets } from "@/components/planets";
 import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/sections/hero";
 import { PublicationsSection } from "@/components/sections/publications";
@@ -94,11 +92,6 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background">
-      {/* Animated starfield background */}
-      <Starfield />
-
-      {/* Floating illustrated planets */}
-      <FloatingPlanets />
 
       {/* Navigation */}
       <Navigation activeSection={activeSection} onNavigate={handleNavigate} />
