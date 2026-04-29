@@ -140,7 +140,7 @@ function SmallPlanet({ className, color = "#9ca3af" }: { className?: string; col
 
 export function FloatingPlanets() {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 hidden md:block">
       {/* Saturn - top right edge on mobile, spread in on desktop */}
       <Saturn className="absolute w-32 h-20 md:w-64 md:h-40 top-[10%] right-[1%] md:right-[10%]" />
 
