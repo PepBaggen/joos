@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Star } from "lucide-react";
+import { LinkedinIcon, Star } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -37,7 +37,7 @@ export function Footer() {
                 className="p-2.5 rounded-xl bg-muted/50 hover:bg-accent/20 text-muted-foreground hover:text-accent transition-all duration-300"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <LinkedinIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
