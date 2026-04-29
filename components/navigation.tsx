@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Settings } from "lucide-react";
 
 interface NavigationProps {
   activeSection: string;
@@ -42,10 +41,6 @@ export function Navigation({ activeSection, onNavigate }: NavigationProps) {
           );
         })}
 
-        {/* Settings icon */}
-        <button className="text-muted-foreground hover:text-foreground transition-colors">
-          <Settings className="w-4 h-4" />
-        </button>
       </div>
     </motion.nav>
   );
