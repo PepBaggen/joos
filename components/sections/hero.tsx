@@ -54,7 +54,7 @@ export function HeroSection() {
         </motion.div>
 
         {/* Main content - two columns on larger screens */}
-        <div className="grid lg:grid-cols-[1fr,160px] gap-8 lg:gap-10">
+        <div className="grid lg:grid-cols-[1fr,96px] gap-8 lg:gap-10">
           {/* Left column - Bio */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
