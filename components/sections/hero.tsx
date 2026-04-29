@@ -16,23 +16,6 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
-const newsItems = [
-  {
-    date: "Aug 2024",
-    text: "UNCOVER Survey catalog published in ApJS",
-    link: "#",
-  },
-  {
-    date: "Jun 2024",
-    text: "RUBIES paper on evolved stellar populations accepted",
-    link: "#",
-  },
-  {
-    date: "Mar 2023",
-    text: "Research on massive quiescent galaxies published in ApJL",
-    link: "#",
-  },
-];
 
 export function HeroSection() {
   return (
@@ -129,36 +112,6 @@ export function HeroSection() {
 
         </div>
 
-        {/* News Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16"
-        >
-          <h2 className="text-2xl font-normal mb-6 lowercase">news</h2>
-          <div className="space-y-3">
-            {newsItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                className="flex items-start gap-6"
-              >
-                <span className="text-sm text-muted-foreground font-medium whitespace-nowrap min-w-[90px]">
-                  {item.date}
-                </span>
-                <a
-                  href={item.link}
-                  className="text-primary hover:underline text-sm leading-relaxed"
-                >
-                  {item.text}
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
