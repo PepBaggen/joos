@@ -61,7 +61,7 @@ export function HeroSection() {
                 <span className="font-semibold">Yale University</span>, working with
                 Prof. Pieter van Dokkum. My research focuses on understanding galaxy
                 formation and evolution across cosmic time, with particular interests
-                on massive galaxies and black holes in the early universe.
+                in massive galaxies and black holes in the early universe.
               </p>
             </div>
 
