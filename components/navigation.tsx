@@ -30,7 +30,7 @@ export function Navigation({ activeSection, onNavigate }: NavigationProps) {
             <button
               key={item.id}
               onClick={() => onNavigate(item.id)}
-              className={`text-base transition-colors ${
+              className={`text-lg transition-colors ${
                 isActive
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
