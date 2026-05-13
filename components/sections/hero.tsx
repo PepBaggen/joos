@@ -33,7 +33,7 @@ export function HeroSection() {
               Josephine F. W. Baggen
             </h1>
             <p className="text-lg text-muted-foreground">
-              PhD Candidate in Astronomy at Yale University
+              PhD Student in Astronomy at Yale University
             </p>
           </div>
           <div className="w-48 h-48 rounded-full overflow-hidden border border-border shrink-0 mt-1">
