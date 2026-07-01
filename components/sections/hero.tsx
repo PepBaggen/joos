@@ -90,7 +90,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-start gap-6"
           >
-            <div className="shrink-0 w-48">
+            <div className="shrink-0 w-1/4">
               <img
                 src="/images/lrd.png"
                 alt="Little Red Dots imaged by JWST"
@@ -100,7 +100,7 @@ export function HeroSection() {
             <div className="space-y-2">
               <h2 className="text-xl font-semibold">Little Red Dots</h2>
               <p className="text-foreground leading-relaxed text-sm">
-                Little Red Dots are a newly discovered population of compact red sources identified by the James Webb Space Telescope. They are thought to be massive black holes and/or galaxies in the very early Universe.
+                Little Red Dots are a newly discovered population of compact red sources seen less than a billion years after the Big Bang identified by the James Webb Space Telescope, whose nature remains a mystery.
               </p>
               <p className="text-xs text-muted-foreground">
                 JWST images of Little Red Dots
