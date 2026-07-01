@@ -83,6 +83,42 @@ export function HeroSection() {
             </div>
           </motion.div>
 
+          {/* LRD image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <img
+              src="/images/lrd.png"
+              alt="Little Red Dots imaged by JWST"
+              className="w-full rounded-lg border border-border"
+            />
+            <p className="text-xs text-muted-foreground mt-2 text-center">
+              Little Red Dots imaged by the James Webb Space Telescope
+            </p>
+          </motion.div>
+
+          {/* Beyond astronomy */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="space-y-4"
+          >
+            <h2 className="text-xl font-semibold">Beyond Astronomy</h2>
+            <p className="text-foreground leading-relaxed">
+              Outside of research, I play tennis as part of the Yale Club Tennis team. We competed at the USTA Tennis on Campus National Championship.
+            </p>
+            <div className="overflow-hidden rounded-lg border border-border">
+              <img
+                src="/images/tennis.jpg"
+                alt="Yale Club Tennis at USTA National Championship"
+                className="w-full object-cover"
+              />
+            </div>
+          </motion.div>
+
         </div>
 
       </div>
