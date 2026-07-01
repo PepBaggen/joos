@@ -115,7 +115,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex items-start gap-6"
           >
-            <div className="shrink-0 w-48">
+            <div className="shrink-0 w-1/4">
               <img
                 src="/images/tennis.jpg"
                 alt="Yale Club Tennis at USTA National Championship"
