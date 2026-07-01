@@ -83,20 +83,29 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* LRD image */}
+          {/* LRD image + text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex items-start gap-6"
           >
-            <img
-              src="/images/lrd.png"
-              alt="Little Red Dots imaged by JWST"
-              className="w-full rounded-lg border border-border"
-            />
-            <p className="text-xs text-muted-foreground mt-2 text-center">
-              Little Red Dots imaged by the James Webb Space Telescope
-            </p>
+            <div className="shrink-0 w-48">
+              <img
+                src="/images/lrd.png"
+                alt="Little Red Dots imaged by JWST"
+                className="w-full rounded-lg border border-border"
+              />
+            </div>
+            <div className="space-y-2">
+              <h2 className="text-xl font-semibold">Little Red Dots</h2>
+              <p className="text-foreground leading-relaxed text-sm">
+                Little Red Dots are a newly discovered population of compact red sources identified by the James Webb Space Telescope. They are thought to be massive black holes and/or galaxies in the very early Universe.
+              </p>
+              <p className="text-xs text-muted-foreground">
+                JWST images of Little Red Dots
+              </p>
+            </div>
           </motion.div>
 
           {/* Beyond astronomy */}
@@ -104,18 +113,20 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="space-y-4"
+            className="flex items-start gap-6"
           >
-            <h2 className="text-xl font-semibold">Beyond Astronomy</h2>
-            <p className="text-foreground leading-relaxed">
-              Outside of research, I play tennis as part of the Yale Club Tennis team. We competed at the USTA Tennis on Campus National Championship.
-            </p>
-            <div className="overflow-hidden rounded-lg border border-border">
+            <div className="shrink-0 w-48">
               <img
                 src="/images/tennis.jpg"
                 alt="Yale Club Tennis at USTA National Championship"
-                className="w-full object-cover"
+                className="w-full rounded-lg border border-border object-cover"
               />
+            </div>
+            <div className="space-y-2">
+              <h2 className="text-xl font-semibold">Beyond Astronomy</h2>
+              <p className="text-foreground leading-relaxed text-sm">
+                Outside of research, I play tennis as part of the Yale Club Tennis team. We competed at the USTA Tennis on Campus National Championship.
+              </p>
             </div>
           </motion.div>
 
