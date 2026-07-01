@@ -59,9 +59,7 @@ export function HeroSection() {
                 Hi! I am a PhD student in the{" "}
                 <span className="font-semibold">Department of Astronomy</span> at{" "}
                 <span className="font-semibold">Yale University</span>, working with
-                Prof. Pieter van Dokkum. My research focuses on understanding galaxy
-                formation and evolution across cosmic time, with particular interests
-                in massive galaxies and black holes in the early universe.
+                Prof. Pieter van Dokkum. My research focuses on the formation of the first massive galaxies and black holes in the early Universe. In particular, I study the newly discovered population of compact red sources, known as Little Red Dots, identified by the James Webb Space Telescope (JWST).
               </p>
             </div>
 
