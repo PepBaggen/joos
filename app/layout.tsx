@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
       <body className="antialiased">
         <SiteHeader />
-        <main className="mx-auto max-w-3xl px-5 pb-20 pt-10 md:pt-16">
+        <main className="mx-auto max-w-4xl px-5 pb-20 pt-10 md:pt-16">
           {children}
         </main>
         <SiteFooter />

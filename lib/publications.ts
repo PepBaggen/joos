@@ -4,8 +4,8 @@ export type Publication = {
   venue: string;
   year: number;
   url: string;
-  // Optional thumbnail in /public/images/papers/, one figure from the paper.
-  image?: string;
+  // Optional figures from the paper, in /public/images/papers/ (one or two).
+  images?: string[];
 };
 
 // First-author papers, newest first. Keep in sync with my_papers.bib.
@@ -17,6 +17,7 @@ export const firstAuthor: Publication[] = [
     venue: "ApJL 1006, L14",
     year: 2026,
     url: "https://doi.org/10.3847/2041-8213/ae82fe",
+    images: ["/images/papers/a383-cluster.jpg", "/images/papers/a383-colors.jpg"],
   },
   {
     authors:
@@ -26,6 +27,7 @@ export const firstAuthor: Publication[] = [
     venue: "ApJL 1002, L4",
     year: 2026,
     url: "https://doi.org/10.3847/2041-8213/ae58a5",
+    images: ["/images/papers/companions-cartoon.jpg"],
   },
   {
     authors: "J. F. W. Baggen, F. C. van den Bosch, K. Mitra",
@@ -34,6 +36,7 @@ export const firstAuthor: Publication[] = [
     venue: "The Open Journal of Astrophysics 9, 58198",
     year: 2026,
     url: "https://doi.org/10.33232/001c.158198",
+    images: ["/images/papers/satellites-cartoon.jpg", "/images/papers/satellites-plot.jpg"],
   },
   {
     authors:
@@ -43,6 +46,7 @@ export const firstAuthor: Publication[] = [
     venue: "ApJL 977, L13",
     year: 2024,
     url: "https://doi.org/10.3847/2041-8213/ad90b8",
+    images: ["/images/papers/sizes2024-cartoon.jpg"],
   },
   {
     authors:
@@ -52,6 +56,7 @@ export const firstAuthor: Publication[] = [
     venue: "ApJL 955, L12",
     year: 2023,
     url: "https://doi.org/10.3847/2041-8213/acf5ef",
+    images: ["/images/papers/sizes2023-fits.jpg", "/images/papers/sizes2023-profiles.jpg"],
   },
 ];
 

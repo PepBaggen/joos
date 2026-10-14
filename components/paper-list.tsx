@@ -26,21 +26,29 @@ export function PaperList({
   thumbnails?: boolean;
 }) {
   return (
-    <ol className="space-y-7">
+    <ol className="space-y-8">
       {items.map((p) => (
-        <li key={p.url} className="flex gap-5">
-          {thumbnails && (
-            <a
-              href={p.url}
-              className="hidden h-24 w-28 shrink-0 overflow-hidden rounded border border-border bg-subtle sm:block"
-              aria-hidden="true"
-              tabIndex={-1}
-            >
-              {p.image && (
-                <img src={p.image} alt="" className="h-full w-full object-cover" />
-              )}
-            </a>
-          )}
+        <li key={p.url} className="flex gap-6">
+          {thumbnails &&
+            (p.images?.length ? (
+              <a
+                href={p.url}
+                className="hidden h-44 w-80 shrink-0 gap-2 overflow-hidden rounded-md border border-border bg-white p-2 transition-shadow hover:shadow-md sm:flex"
+                aria-hidden="true"
+                tabIndex={-1}
+              >
+                {p.images.map((src) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt=""
+                    className="h-full min-w-0 flex-1 object-contain"
+                  />
+                ))}
+              </a>
+            ) : (
+              <div className="hidden w-80 shrink-0 sm:block" aria-hidden="true" />
+            ))}
           <div className="space-y-1">
             <a href={p.url} className="font-medium leading-snug">
               {p.title}

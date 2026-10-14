@@ -14,7 +14,7 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-border">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
+      <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
         <Link
           href="/"
           className="font-serif text-lg font-semibold text-foreground no-underline hover:text-foreground"

@@ -36,7 +36,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <h2 className="mb-6 text-2xl">Selected publications</h2>
+        <h2 className="mb-6 text-2xl">First-author papers</h2>
         <PaperList items={firstAuthor} />
         <p className="mt-6 text-sm">
           <Link href="/publications">All publications →</Link>
