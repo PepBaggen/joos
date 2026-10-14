@@ -26,40 +26,36 @@ export function PaperList({
   thumbnails?: boolean;
 }) {
   return (
-    <ol className="space-y-8">
+    <ol className={thumbnails ? "space-y-12" : "space-y-8"}>
       {items.map((p) => (
-        <li key={p.url} className="flex gap-6">
-          {thumbnails &&
-            (p.images?.length ? (
-              <a
-                href={p.url}
-                className="hidden h-44 w-80 shrink-0 gap-2 overflow-hidden rounded-md border border-border bg-white p-2 transition-shadow hover:shadow-md sm:flex"
-                aria-hidden="true"
-                tabIndex={-1}
-              >
-                {p.images.map((src) => (
-                  <img
-                    key={src}
-                    src={src}
-                    alt=""
-                    className="h-full min-w-0 flex-1 object-contain"
-                  />
-                ))}
-              </a>
-            ) : (
-              <div className="hidden w-80 shrink-0 sm:block" aria-hidden="true" />
-            ))}
-          <div className="space-y-1">
-            <a href={p.url} className="font-medium leading-snug">
-              {p.title}
-            </a>
+        <li
+          key={p.url}
+          className="flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
+        >
+          <div className="flex-1 space-y-1">
+            <p className="font-medium leading-snug">{p.title}</p>
             <p className="text-sm text-muted-foreground">
               <Authors authors={p.authors} />
             </p>
             <p className="text-sm text-muted-foreground">
               <em>{p.venue}</em> ({p.year})
             </p>
+            <p className="pt-1 text-sm">
+              <a href={p.url}>Read the paper →</a>
+            </p>
           </div>
+          {thumbnails && p.images?.length ? (
+            <div className="flex h-64 w-full shrink-0 gap-3 overflow-hidden rounded-md border border-border bg-white p-3 md:h-80 md:w-[36rem]">
+              {p.images.map((src) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`Figure from “${p.title}”`}
+                  className="h-full min-w-0 flex-1 object-contain"
+                />
+              ))}
+            </div>
+          ) : null}
         </li>
       ))}
     </ol>
