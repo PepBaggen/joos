@@ -4,6 +4,8 @@ export type Publication = {
   venue: string;
   year: number;
   url: string;
+  // Optional thumbnail in /public/images/papers/, one figure from the paper.
+  image?: string;
 };
 
 // First-author papers, newest first. Keep in sync with my_papers.bib.

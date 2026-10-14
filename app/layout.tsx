@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "PhD candidate at Yale studying little red dots and the first massive black holes with JWST.",
     type: "website",
-    images: ["/images/lensed-pairs.png"],
+    images: ["/images/profile.jpeg"],
   },
 };
 
