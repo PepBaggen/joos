@@ -36,7 +36,7 @@ export const firstAuthor: Publication[] = [
     venue: "The Open Journal of Astrophysics 9, 58198",
     year: 2026,
     url: "https://doi.org/10.33232/001c.158198",
-    images: ["/images/papers/satellites-cartoon.jpg", "/images/papers/satellites-plot.jpg"],
+    images: ["/images/papers/satellites-cartoon.jpg"],
   },
   {
     authors:
@@ -56,7 +56,7 @@ export const firstAuthor: Publication[] = [
     venue: "ApJL 955, L12",
     year: 2023,
     url: "https://doi.org/10.3847/2041-8213/acf5ef",
-    images: ["/images/papers/sizes2023-fits.jpg", "/images/papers/sizes2023-profiles.jpg"],
+    images: ["/images/papers/sizes2023-fits.jpg"],
   },
 ];
 
