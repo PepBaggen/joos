@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- SEO Meta -->
+
+        <title>Page not Found - Pagina niet gevonden - Universiteit Leiden</title>
+        <meta name="keywords" content="{tags}" />
+        <meta name="description" content="{intro}" />
+
+        <!-- Google Webmaster -->
+        <meta name="google-site-verification" content="{string}" />
+
+        <!-- FAVICONS -->
+        <link rel="shortcut icon" href="/design-1.0/assets/icons/favicon.ico" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="/design-1.0/css/ul2common/screen.css" />
+    </head>
+
+    <body class="full ul2external">
+        <script>
+            document.body.className += " js";
+        </script>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="logo">
+                    <a href="/"><img width="151" height="64" src="/design-1.0/assets/images/zegel.png" alt="Universiteit Leiden" /></a>
+                </h1>
+                <!-- -->
+            </header>
+            <nav class="main-nav" data-menu-label="Menu">
+                <!--  -->
+            </nav>
+        </div>
+        <!-- .header-container -->
+
+        <!-- Main -->
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+                <nav class="breadcrumb">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li>Error</li>
+                    </ol>
+                </nav>
+
+                <!-- Content -->
+                <div id="content">
+                    <article>
+                        <img id="error-image" class="error-image float-left" src="/design-1.0/assets/images/errorpage/error.jpg" alt="" />
+
+                        <div class="error-right">
+                            <h1>Pagina niet gevonden</h1>
+                            <p>Het lijkt erop dat deze pagina niet (meer) bestaat of misschien verhuisd is. Ga naar de <a href="/">homepage</a>.</p>
+                            <h1 class="en">Page not Found</h1>
+                            <p>It seems that the page (no longer) exist or may be moved. Please visit the <a href="/">homepage</a>.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <!-- Scripts -->
+        <script async defer src="/design-1.0/scripts/ul2.js" data-main="/design-1.0/scripts/ul2common/main.js"></script>
+    </body>
+</html>

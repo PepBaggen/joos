@@ -1,45 +1,44 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Crimson_Pro, JetBrains_Mono } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const crimsonPro = Crimson_Pro({
-  subsets: ["latin"],
-  variable: "--font-serif",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-source-serif",
 });
 
 export const metadata: Metadata = {
-  title: "Josephine F. W. Baggen | PhD Candidate in Astronomy at Yale",
+  metadataBase: new URL("https://josephinebaggen.nl"),
+  title: {
+    default: "Josephine Baggen | Astronomy, Yale University",
+    template: "%s | Josephine Baggen",
+  },
   description:
-    "Personal academic portfolio of Josephine F. W. Baggen, PhD Candidate in Astronomy at Yale University. Exploring the cosmos through research in extragalactic astronomy and galaxy formation.",
+    "Josephine Baggen, PhD candidate in Astronomy at Yale University, studying little red dots and the formation of the first massive galaxies and black holes with JWST.",
   keywords: [
+    "Josephine Baggen",
     "astronomy",
-    "astrophysics",
+    "little red dots",
+    "JWST",
+    "gravitational lensing",
+    "black holes",
     "Yale University",
-    "PhD",
-    "galaxy formation",
-    "extragalactic astronomy",
   ],
-  authors: [{ name: "Josephine F. W. Baggen" }],
+  authors: [{ name: "Josephine Baggen" }],
   openGraph: {
-    title: "Josephine F. W. Baggen | PhD Candidate in Astronomy",
+    title: "Josephine Baggen | Astronomy, Yale University",
     description:
-      "Personal academic portfolio showcasing research in extragalactic astronomy and galaxy formation.",
+      "PhD candidate at Yale studying little red dots and the first massive black holes with JWST.",
     type: "website",
+    images: ["/images/lensed-pairs.png"],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05050a",
+  themeColor: "#fbfaf7",
   width: "device-width",
   initialScale: 1,
 };
@@ -50,11 +49,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${spaceGrotesk.variable} ${crimsonPro.variable} ${jetbrainsMono.variable} bg-background`}
-    >
-      <body className="antialiased">{children}</body>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+      <body className="antialiased">
+        <SiteHeader />
+        <main className="mx-auto max-w-3xl px-5 pb-20 pt-10 md:pt-16">
+          {children}
+        </main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }
