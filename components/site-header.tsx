@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/", label: "About" },
   { href: "/publications", label: "Publications" },
-  { href: "/cv", label: "CV" },
+  { href: "/cv.pdf", label: "CV" },
 ];
 
 export function SiteHeader() {

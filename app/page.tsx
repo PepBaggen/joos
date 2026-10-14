@@ -108,7 +108,7 @@ export default function HomePage() {
           <p className="text-sm">
             <a href="mailto:josephine.baggen@yale.edu">josephine.baggen@yale.edu</a>
             <span className="text-muted-foreground"> · </span>
-            <Link href="/cv">CV</Link>
+            <a href="/cv.pdf">CV</a>
             <span className="text-muted-foreground"> · </span>
             <Link href="/publications">Publications</Link>
           </p>
